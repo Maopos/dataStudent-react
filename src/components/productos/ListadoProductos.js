@@ -33,7 +33,12 @@ const ListadoProductos = () => {
       <h2>Tus estudiantes</h2>
       <br/>
       <br/>
-      <table className="table">
+      <div class="accordion" id="">
+      {productos.map((i, j) => (
+            <Producto key={i._id} producto={i} numero={(j += 1)}></Producto>
+          ))}
+      </div>
+      {/* <table className="table">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -48,7 +53,8 @@ const ListadoProductos = () => {
             <Producto key={i._id} producto={i} numero={(j += 1)}></Producto>
           ))}
         </tbody>
-      </table>
+      </table> */}
+
     </div>
   );
 };
